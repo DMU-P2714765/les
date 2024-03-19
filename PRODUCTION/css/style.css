@@ -1,0 +1,44 @@
+h1 {
+text-align: center;
+}
+h2 {
+text-align: center;
+}
+h3 {
+color: darkorange;
+}
+/*The H3 elements have been coded in this CSS file to always appear dark orange so that it seems as though Les the Fox is presenting whatever information they contain. It's additionally to adhere to the main colour scheme of the concept design, which is itself an extension of the colour of Les.*/
+.centerimage {
+text-align: center;
+}
+.Les {
+width: 100%;
+}
+.Overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100VW;
+height: 100VH;
+pointer-events: none;
+}
+/*These Overlay elements have been given a fixed position and somewhat small height to give him more focus, and to leave a lot of room on the screen for viewing the camera aspect of the code's AR parts.*/
+a {
+    pointer-events: all;
+}
+.LesText {
+text-align: right;
+}
+.Les-container {
+    width: 30%;
+    position: fixed;
+    right: 0;
+    pointer-events: all;
+}
+/*Les's icon has been programmed to be somewhat large - when looked at on a PC - to ensure that he's visible enough on phone screens in order for the user to successfully click on him.*/
+.MenuText {
+    color: red;
+    
+}
+/*The red colour of the MenuText on the index page is due to it being another part of the concept design's colour scheme associated with les the Fox, along with it being the colour of the Leicester flag, which is programmed to appear in AR on that same page.*/
+/*This is, however, left-over redundant CSS code from before this red text on the home screen was turned into an AR element.*/

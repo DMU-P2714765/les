@@ -1,0 +1,12 @@
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+<a-scene>
+    <a-assets>
+        <img id="pawprints" src="360_F_668032374_aXmpAso5RL9l8vzCOybwOzGX2pKtVDye.png">
+</a-assets>
+    <a-box position="0 0 -3" color="blue"></a-box>
+    <a-tetrahedron color="red" radius="5" position="-1 2 -10"></a-tetrahedron>
+    <a-image src="#pawprints" position="2 0 -3" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+    <a-text color="black" value="The mitochondria is the powerhouse of the cell" position="2 2 -5"></a-text>
+    <a-sky color="yellow"></a-sky>
+</a-scene>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Les-container {
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script type="text/javascript" src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js"></script>
+    <script type="text/javascript" src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+    <body>
+    <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true' cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;' raycaster="objects: [gps-new-entity-place];">
+    <a-assets>
+                <img id="pawprints" src="360_F_668032374_aXmpAso5RL9l8vzCOybwOzGX2pKtVDye.png">
+                <img src="png-clipart-google-maps-pin-google-map-maker-pin-google-location-logo-angle-heart.png" id="marker">
+                <a-asset-item id="locationmarker" src="https://raw.githubusercontent.com/DMU-P2714765/3DModels/main/LocationMarker/scene.gltf?token=GHSAT0AAAAAACPZL6NNIUAZOGYLEX25ASP6ZPZP3KQ"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#locationmarker" position="0 2.5 -5" gps-new-entity-place="latitude: 52.635265128102425; longitude: -1.13613915495515;" look-at="[gps-new-camera]" onclick="window.location.href='https://www.google.co.uk/maps/place/The+Globe+-+Pub+%26+Kitchen/@52.6352085,-1.1362097,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNvZLtw3nZstGIifJD_AWw-8Iv_J8s8_Xy69NY-!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNvZLtw3nZstGIifJD_AWw-8Iv_J8s8_Xy69NY-%3Dw153-h86-k-no!7i3634!8i2041!4m7!3m6!1s0x4877611fd054c223:0xf340614640727bcc!8m2!3d52.635285!4d-1.1360861!10e5!16s%2Fg%2F1tq8j1cy?entry=ttu'"></a-entity>
+    <!--Like the model of a Cute Fox, which hasn't been programmed with a look-at command so as to give it more of a feel of an actual presence in the AR world, this 3D model came from Sketchfab. This location marker pin can be found at this link: https://sketchfab.com/3d-models/map-pin-667ec99860674e57892823a19a1d8f15.-->
+            <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+            <!--Unlike the other web links in my app, this one is a part of the location marker icon feature, which I've done through the same HTML command, onclick="window.location.href", that I've implemented to make Les the Fox's icon clickable.-->
+                <a-image src="#pawprints" position="1 0 -3" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+                <a-image src="#pawprints" position="-2 0 -13" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+                <a-image src="#pawprints" position="5 0 7" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+                <a-text look-at="[gps-new-camera]" color="darkorange" value="NEXT LOCATION:" position="-1 2 -5" width="7%" height="7%"></a-text>
+                <a-text look-at="[gps-new-camera]" color="darkorange" value="The Globe - Pub & Kitchen" position="-1.5 1.5 -5" width="7%" height="7%"></a-text>
+    </a-scene>
+    <!--I wanted to make these two pieces of text above as more AR elements in front of where the camera perspective would be, to further reinforce the user's feeling of immersion that I wanted to create through the placements of the pawprint images.-->
+    <div class="Overlay">
+            <a href="Preferences.html">PREFERENCES</a>
+                <a href="index.html">Return to the Home screen here!</a>
+                <a href="https://www.theglobeleicester.com/menus/">CLICK HERE FOR MENU</a>
+                <a href="More Information.html">MORE INFORMATION</a>
+                <div class="Les-container" onclick="window.location.href='LesMenu.html'">
+                    <img class="Les" src="Les the Fox - normal.png">
+                    </div>
+            <h2><u><b>PUB</b></u></h2>
+            <h2>FEATURES:</h2>
+            <h3 align="center">ALE</h3>
+            <h3 align="center">FISH & CHIPS</h3>
+            <h3 align="center">GRILL STEAKS</h3>
+    </div>
+    <!--The text elements are less stylised than in the original design, due to the app's nature of being intended as a prototype and, additionally, because I intended to keep the main focus of my coding on that of the content in the a-scene and a-assets lines.-->
+    </body>
+    </html>

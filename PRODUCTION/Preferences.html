@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv+"X-UA-Compatible" content=""IE=edge">
+    <meta name=""viewport" content=""width=device-width, initial-scale="1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    
+    <body>
+        <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'></a-scene>
+            <a-assets>
+                <img id="pawprints" src="360_F_668032374_aXmpAso5RL9l8vzCOybwOzGX2pKtVDye.png">
+            </a-assets>
+            <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+            <a-entity gps-new-entity-place="latitude: 52.62836988261785; longitude: -1.1402215476994542">
+            <a-image src="#pawprints" position="1 0 -3" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+            <a-image src="#pawprints" position="-2 0 -13" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+            <a-image src="#pawprints" position="5 0 7" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+            </a-entity>
+            </a-scene>
+        
+        <!--This is the only page of the app on which the icon of Les the Fox hasn't been programmed to appear, -->
+        <div class="Overlay">
+            <a href="index.html">Return to the Home screen here!</a>
+            <a href="Main Trail Function.html">Click to use the trail function!</a>
+            <h1>[ THIS FEATURE ISN'T FULLY PROGRAMMED FOR THIS APP PROTOTYPE ]</h1>
+            <h1>However, feel free to have a look at the app's listed default trail below!</h1>
+            <!--The feature of a full trail listing for the user to follow was too complex for me to code into what's supposed to be a prototype-standard form of the app, hence this text placeholder being here, where the selectable preference options of my concept design would've been placed.-->
+            <h3 align="center">The Globe - Pub & Kitchen (Silver Street)</h3>
+            <h3 align="center">The Gadabout (Guildhall Lane)</h3>
+            <h3 align="center">Wygston's House Bar & Restaurant (Applegate)</h3>
+            <h3 align="center">Cosy Club (Highcross Street)</h3>
+            <h3 align="center">Turtle Bay Leicester (Bath House Lane)</h3>
+            <h3 align="center">Frankie & Benny's (Highcross Shopping Centre, Bath House Lane)</h3>
+            <h3 align="center">The Salmon (Butt Close Lane)</h3>
+    </div>
+    <!--Although only the first one of these seven listed locations has been actually, properly coded as a function in the app - and, therefore, was the only one which I saw fit to carry out user testing for - the co-ordinates of the other six are all listed within my Report, meaning that the code is able to potentially be tested with them by placing their corresponding co-ordinates in place of those of The Globe within the a-image src="#marker" line, on the Main Trail Function page.-->
+    </body>
+    </html>

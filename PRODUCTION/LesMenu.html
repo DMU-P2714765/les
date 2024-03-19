@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <!--This HTML page is unique to all four of the others for my app, in that it's the only one which isn't accessed through text-based navigation options and can instead only be seen by activating a feature in the form of an image icon.-->
+    
+    
+    <body>
+    <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+        <a-assets>
+            <a-asset-item id="cutefox" src="https://raw.githubusercontent.com/DMU-P2714765/3DModels/main/CuteFox/scene.gltf?token=GHSAT0AAAAAACPZL6NNNRIKC3CCHTT2Y75IZPZP2WA"></a-asset-item>
+        </a-assets>
+        <a-entity gltf-model="#cutefox" position="0 0 -7"></a-entity>
+        <!--This 3D model  came from this Sketchfab link: Cute Fox: https://sketchfab.com/3d-models/cute-fox-fad88d036f764cceb3938549ca446c89.-->
+        </a-scene>
+    <!--Another way in which this particular page is unique to the others is that the AR pawprint images don't appear here - with the navigation buttons, Les's icon and the on-screen text being the only overlaid elements - so that, as per the concept design, the user can feel as though this help screen is giving them a temporary reprieve from navigating through the other pages and functions.-->
+        <div class="Overlay">
+            <a href="Preferences.html">PREFERENCES</a>
+            <a href="index.html">Return to the Home screen here!</a>
+            <a href="Main Trail Function.html">Click to use the trail function!</a>
+            <div class="MenuText">
+            <h1>Les the Fox's Menu</h1>
+            <h2>~ How can I help? ~</h2>
+            </div>
+            <h3 align="center"><u><b>Here's how to use this awesome app that I call home!</b></u></h3>
+            <h3 align="center">As this app is only a prototype, only one of the locations listed in PREFERENCES is working, and that is the Globe pub on Silver Street. Walk to it to find the location marker icon on your screen, and then once you see it, click that location marker to see some lovely pictures of the place courtesy of Google Maps!</h3>
+            <h3 align="center">Feel free at any time to come back to this menu whenever you'd like a little pause.</h3>
+            <!--There's comparatively less coded here than I planned in the original concept design, because of the end result's prototype nature which means that, especially due to my inexperience with coding, not as many features such as the originally-planned 'ADD A LOCATION TO FAVOURITES' function could be implemented.-->
+            <div class="Les-container">
+                <img class="Les" src="Les the Fox - menu opened.png">
+               </div>
+            </div>
+    </body>
+    </html>

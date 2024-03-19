@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Les-container {
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script type="text/javascript" src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js"></script>
+    <script type="text/javascript" src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+    <body>
+    <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+    <a-assets>
+                <img id="pawprints" src="360_F_668032374_aXmpAso5RL9l8vzCOybwOzGX2pKtVDye.png">
+    </a-assets>
+            <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+            <a-entity gps-new-entity-place="latitude: 52.62836988261785; longitude: -1.1402215476994542">
+            <a-image src="#pawprints" position="1 0 -3" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+            <a-image src="#pawprints" position="-2 0 -13" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+            <a-image src="#pawprints" position="5 0 7" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
+            </a-entity>
+    </a-scene>
+    <div class="Overlay">
+                <a href="Main Trail Function.html">Exit From More Information</a>
+                <a href="index.html">Return to the Home screen here!</a>
+                <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g186334-d1073272-Reviews-or30-The_Globe_Leicester-Leicester_Leicestershire_England.html" target="_blank">SEE REVIEWS</a>
+                <a href="https://www.theglobeleicester.com/reservations/" target="_blank">CLICK HERE TO BOOK A TABLE!</a>
+                <!--Both of these third-party webpage links have been kept as simple a href elements at the top of the screen, with the links to the other pages, as the main focus of this page is supposed to be the lines of etra information below. It's also because this can tie in with one of the questions of my user testing survey, this question asking how easy the user found navigating these buttons at the top of the screen.-->
+                <h1>OPENING TIMES:</h1>
+                <h2>11AM-11PM - MONDAY, TUESDAY, WEDNESDAY AND THURSDAY</h2>
+                <h2>11AM-12AM - FRIDAY AND SATURDAY</h2>
+                <h2>11AM-9PM - SUNDAY</h2>
+                <h3>"Old school real ale pub dating back to 1720, serving a menu of hearty, traditional British dishes."</h3>
+                <!--All of this information in this page's text elements is from the pub's summary on Google Maps, and this is the same site that the user gets taken to on the Main Trail Function page, by clicking the location marker icon, to see images of the location.-->
+                <div class="Les-container" onclick="window.location.href='LesMenu.html'">
+                    <img class="Les" src="Les the Fox.png">
+                    </div>
+    </div>
+    </body>
+    </html>

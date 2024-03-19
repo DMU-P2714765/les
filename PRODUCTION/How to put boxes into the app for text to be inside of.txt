@@ -1,0 +1,8 @@
+In HTML div: position = fixed, top and left values = 0, width = 100VW, height = 100VH
+
+Put all of this after the A-scene area in the code.
+
+<div class="Overlay">
+    <h1>More Information</h1>
+    <a href="Main Trail Function.html">Click to use the trail function!</a>
+</div>
