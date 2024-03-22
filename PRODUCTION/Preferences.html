@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv+"X-UA-Compatible" content=""IE=edge">
-    <meta name=""viewport" content=""width=device-width, initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -12,9 +12,9 @@
     
     <body>
         <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'></a-scene>
-            <a-assets>
+        <a-assets>
                 <img id="pawprints" src="360_F_668032374_aXmpAso5RL9l8vzCOybwOzGX2pKtVDye.png">
-            </a-assets>
+        </a-assets>
             <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
             <a-entity gps-new-entity-place="latitude: 52.62836988261785; longitude: -1.1402215476994542">
             <a-image src="#pawprints" position="1 0 -3" color="darkorange" width="10%" height="10%" rotation="-90 0 0"></a-image>
